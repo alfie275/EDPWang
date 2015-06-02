@@ -1,0 +1,52 @@
+package edp;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.Insets;
+
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.border.Border;
+
+public class GUI extends JFrame {
+	
+	
+	private JTextField textField;
+	private JPanel bottomPanel;
+	private JButton enterNumber;
+	private JLabel output;
+	
+	public GUI(){
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new BorderLayout(10, 20));
+		this.setTitle("Numberwang!");
+		this.setVisible(true);
+		
+		
+		this.bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 10));
+		
+		this.textField = new JTextField("number input");
+		this.enterNumber = new JButton("enter number");
+		
+		this.bottomPanel.add(this.textField);
+		this.bottomPanel.add(this.enterNumber);
+		
+		
+		this.getContentPane().add(this.bottomPanel, BorderLayout.SOUTH);
+		this.setSize(500, 500);
+	
+	}
+
+}

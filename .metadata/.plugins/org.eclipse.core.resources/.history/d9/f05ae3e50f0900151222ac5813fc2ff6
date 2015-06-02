@@ -1,0 +1,19 @@
+package edp;
+
+public class GameLogic {
+
+	private GUI gui;
+	
+	public GameLogic(){
+		this.gui = new GUI();
+	
+	}
+	
+	
+	public static void main(Strings[] args){
+		
+		
+		
+	}
+	
+}

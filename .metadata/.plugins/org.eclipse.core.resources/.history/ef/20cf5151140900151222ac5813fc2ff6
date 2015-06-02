@@ -1,0 +1,29 @@
+package edp;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class App implements ActionListener {
+
+	private GUI gui;
+	private GameLogic logic;
+	
+	public App(){
+		
+		this.gui = new GUI();
+		this.logic = new GameLogic();
+		
+	}
+	
+	public void actionPerformed(ActionEvent event) {
+		
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		App TheGame = new App();
+	}
+
+}

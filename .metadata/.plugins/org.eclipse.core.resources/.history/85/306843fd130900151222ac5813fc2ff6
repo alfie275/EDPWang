@@ -1,0 +1,19 @@
+package edp;
+
+
+
+public class App {
+
+	private GUI gui;
+	
+	public App(){
+		
+		this.gui = new GUI();
+		
+	}
+	
+	public static void main(String[] args) {
+		App TheGame = new App();
+	}
+
+}

@@ -1,0 +1,19 @@
+package edp;
+
+import java.util.Random;
+
+public class GameLogic {
+
+	private Random random;
+	
+	public GameLogic(){
+
+	
+	}
+	
+	
+	public boolean isNumberWang()
+	
+
+	
+}
