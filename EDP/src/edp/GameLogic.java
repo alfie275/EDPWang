@@ -8,15 +8,15 @@ public class GameLogic {
 	
 	private App app;
 	
-	public GameLogic(App nApp){
-		this.random = new Random();
-		this.app = nApp;
+	public GameLogic(App app){
+		random = new Random();
+		this.app = app;
 	}
 	
-	
-	public boolean isNumberWang(float number){
+	/** Function that returns if the given number is numberwang **/
+	public boolean isNumberwang(float number){
 		
-		return this.random.nextBoolean();
+		return random.nextBoolean();
 		
 	}
 	

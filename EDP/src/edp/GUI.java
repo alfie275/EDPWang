@@ -25,6 +25,8 @@ import javax.swing.border.Border;
 
 public class GUI extends JFrame {
 	
+
+	private static final long serialVersionUID = 1L;
 	
 	private JTextField textField;
 	private JPanel bottomPanel;
@@ -33,42 +35,45 @@ public class GUI extends JFrame {
 	
 	private App app;
 	
+	/** Set the string in the label **/
 	public void setOutput(String newText){
 		output.setText(newText);
 		
 	}
 	
+	/** Get the string from the textfield **/
 	public String getInput(){
 		return textField.getText();
 		
 	}
 	
-	public GUI(App nApp){
-		this.app = nApp;
+	public GUI(App app){
+		this.app = app;
 		
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setLayout(new BorderLayout(10, 20));
-		this.setTitle("Numberwang!");
-		this.setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLayout(new BorderLayout(10, 20));
+		setTitle("Numberwang!");
+		setVisible(true);
 		
 		
-		this.bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 10));
+		bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 30, 10));
 		
-		this.textField = new JTextField("number input", 8);
+		textField = new JTextField("number input", 8);
+		textField.addKeyListener(app);
 		
-		this.enterNumber = new JButton("enter number");
+		enterNumber = new JButton("enter number");
 		
-		this.enterNumber.setActionCommand("buttonpress");
-		this.enterNumber.addActionListener(app);
+		enterNumber.setActionCommand("buttonpress");
+		enterNumber.addActionListener(app);
 		
-		this.bottomPanel.add(this.textField);
-		this.bottomPanel.add(this.enterNumber);
+		bottomPanel.add(textField);
+		bottomPanel.add(enterNumber);
 		
-		this.output = new JLabel("output", JLabel.CENTER);
+		output = new JLabel("output", JLabel.CENTER);
 		
-		this.getContentPane().add(this.output, BorderLayout.NORTH);
-		this.getContentPane().add(this.bottomPanel, BorderLayout.SOUTH);
-		this.setSize(500, 500);
+		getContentPane().add(output, BorderLayout.NORTH);
+		getContentPane().add(bottomPanel, BorderLayout.SOUTH);
+		setSize(500, 500);
 	
 	}
 
